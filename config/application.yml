@@ -1,0 +1,17 @@
+defaults: &defaults
+  :FACEBOOK_KEY: "341031536034250"
+  :FACEBOOK_SECRET: "d8ce13ac788d3b00e08e1ad6d4a9546a"
+  :GMAIL_USERNAME: "manish.johari@kiwitech.com"
+  :GMAIL_PASSWORD: "immanish"
+  :BING_CLIENT_ID: "manishjoharigchat"
+  :BING_CLIENT_SECRET: "NemsubZTrS/Nppk4lq10nRB5TNhbHRzjdQP7praYpdY="
+  :BING_KEY: "bB37NupTcuRGg5AjdaietoQoMsyNciO93tD4mBQ4I7Q"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
