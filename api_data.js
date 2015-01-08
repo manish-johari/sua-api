@@ -40,7 +40,7 @@ define({ api: [
       "examples": [
         {
           "title": "Error (422):",
-          "content": "{\n\t \"errors\" : \n\t {\n\t\t \"phone_no\": \"Phone_no has already been taken.\" \n\t}\n}"
+          "content": "{\n\t \"errors\" : \n\t {\n\t\t \"phone_no\": \"Phone no can't be blank.\" \n\t}\n}"
         }
       ]
     },
