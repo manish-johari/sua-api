@@ -85,6 +85,79 @@ define({ api: [
     },
   },
 
+  {
+    "type": "post",
+    "url": "/profile",
+    "title": "Create Profile",
+    "name": "create_profile",
+    "description": "API will create user's profile.",
+    "group": "Profile",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "profile[name]",
+            "optional": false,
+            "description": "Provide the profile name of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "profile[date_of_birth]",
+            "optional": false,
+            "description": "Provide the date of birth. Format : <b>YYYY/MM/DD</b>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "profile[gender]",
+            "optional": false,
+            "description": "Provide the gender."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "profile[status]",
+            "optional": false,
+            "description": "Provide the profile status of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "profile[profile_image_attributes][media]",
+            "optional": false,
+            "description": "Provide the profile Image."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "user[email]",
+            "optional": false,
+            "description": "Provide the user's email."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"Ok\" \n}"
+        }
+      ]
+    }
+  },
+
 
 
 ]});
