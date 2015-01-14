@@ -32,7 +32,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"user_id\":1,\"country_code\":91,\"phone_no\":\"9971480801\",\"verification_token\":\"778fb\" \n}"
+          "content": "{\n\t\"user_id\":1,\"country_code\":91,\"phone_no\":\"9971480801\",\"verification_token\":\"778fb\",\"token\":\"az2Jf41yDMc1E2DMHssS\" \n}"
         }
       ]
     },
