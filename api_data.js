@@ -21,9 +21,9 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
-            "field": "user[phone_no]",
+            "field": "user[phone_num]",
             "optional": false,
-            "description": "Provide the phone_no."
+            "description": "Provide the phone_num."
           }
         ]
         }
@@ -32,7 +32,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"user_id\":1,\"country_code\":91,\"phone_no\":\"9971480801\",\"verification_token\":\"778fb\",\"token\":\"az2Jf41yDMc1E2DMHssS\" \n}"
+          "content": "{\n\t\"user_id\":1,\"country_code\":91,\"phone_num\":\"9971480801\",\"verification_token\":\"778fb\",\"token\":\"az2Jf41yDMc1E2DMHssS\" \n}"
         }
       ]
     },
@@ -40,7 +40,7 @@ define({ api: [
       "examples": [
         {
           "title": "Error (422):",
-          "content": "{\n\t \"errors\" : \n\t {\n\t\t \"phone_no\": \"Phone no can't be blank.\" \n\t}\n}"
+          "content": "{\n\t \"errors\" : \n\t {\n\t\t \"phone_num\": \"Phone no can't be blank.\" \n\t}\n}"
         }
       ]
     },
@@ -71,7 +71,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success-Response (200):",
-          "content": "{\n\t \"user_id\":1,\"country_code\":91,\"phone_no\":\"9971480801\",\"token\":\"nBbemTsS4U4ia7YAsKbW\"\n}\n"
+          "content": "{\n\t \"user_id\":1,\"country_code\":91,\"phone_num\":\"9971480801\",\"token\":\"nBbemTsS4U4ia7YAsKbW\"\n}\n"
         }
       ]
     },
