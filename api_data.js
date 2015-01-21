@@ -13,14 +13,14 @@ define({ api: [
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Integer",
             "field": "user[country_code]",
             "optional": false,
             "description": "Provide the Country Code."
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Integer",
             "field": "user[phone_num]",
             "optional": false,
             "description": "Provide the phone_num."
@@ -32,7 +32,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"user_id\":1,\"country_code\":91,\"phone_num\":\"9971480801\",\"verification_token\":\"778fb\",\"token\":\"az2Jf41yDMc1E2DMHssS\" \n}"
+          "content": "{\n\t\"user_id\":1,\n\t \"country_code\":91,\n\t \"phone_num\":\"9971480801\",\n\t \"verification_token\":\"778fb\",\n\t \"token\":\"az2Jf41yDMc1E2DMHssS\" \n}"
         }
       ]
     },
@@ -40,7 +40,7 @@ define({ api: [
       "examples": [
         {
           "title": "Error (422):",
-          "content": "{\n\t \"errors\" : \n\t {\n\t\t \"phone_num\": \"Phone no can't be blank.\" \n\t}\n}"
+          "content": "{\n\t \"errors\" : \n\t {\n\t\t \"phone_num\": \"Phone num can't be blank.\" \n\t}\n}"
         }
       ]
     },
@@ -71,7 +71,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success-Response (200):",
-          "content": "{\n\t \"user_id\":1,\"country_code\":91,\"phone_num\":\"9971480801\",\"token\":\"nBbemTsS4U4ia7YAsKbW\"\n}\n"
+          "content": "{\n\t \"user_id\":1,\n\t \"country_code\":91,\n\t \"phone_num\":\"9971480801\"\n}\n"
         }
       ]
     },
@@ -83,6 +83,44 @@ define({ api: [
         }
       ]
     },
+  },
+
+  {
+    "type": "post",
+    "url": "/contacts",
+    "title": "Create Contact",
+    "name": "create_contact",
+    "description": "API will create user's contact.",
+    "group": "Contact",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "user[contact]",
+            "optional": false,
+            "description": "Provide the contact number of user. <p>eg. 09021610253 / +919021610253 / 9021610253</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"full_phone_num\": 919021610253,\n\t\"is_existing\": true \n}"
+        }
+      ]
+    }
   },
 
   {
