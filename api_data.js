@@ -108,7 +108,7 @@ define({ api: [
             "type": "String",
             "field": "user[contact]",
             "optional": false,
-            "description": "Provide the contact number of user. <p>eg. 09021610253 / +919021610253 / 9021610253</p>"
+            "description": "Provide the contact number of user. <p>eg. 09021xxxx / +919021xxxx / 9021xxxx</p>"
           },
           {
             "group": "Parameter",
@@ -124,7 +124,38 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"full_phone_num\": 919021610253,\n\t\"is_existing\": true \n}"
+          "content": "{\n\t\"id\": 1, \n\t\"conatct\": 919021xxxx, \n\t\"is_existing\": true \n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "get",
+    "url": "/contacts",
+    "title": "Show Contacts",
+    "name": "show_contacts",
+    "description": "API will show user's contacts.",
+    "group": "Contact",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\"contacts\": \n\t\[\n\t\t{\"id\":1,\"contact\":919971xxxxx,\"is_existing\":true\},\n\t\t\{\"id\":2,\"contact\":9190xxxxxxx,\"is_existing\":false\}\n\t]\n}"
         }
       ]
     }
