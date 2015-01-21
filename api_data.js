@@ -64,6 +64,13 @@ define({ api: [
             "optional": false,
             "description": "Provide the confirmation_token sent to user via sms."
           },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
         ]
       }
     },
