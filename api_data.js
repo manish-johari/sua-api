@@ -163,7 +163,7 @@ define({ api: [
 
   {
     "type": "delete",
-    "url": "/contacts/:id",
+    "url": "/contacts",
     "title": "Delete Contact",
     "name": "delete_contact",
     "description": "API will delete user's contact.",
@@ -172,6 +172,13 @@ define({ api: [
     "parameter": {
       "fields": {
         "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "field": "id",
+            "optional": false,
+            "description": "Provide the array of contact id of user. <p>eg. [\"4\", \"10\"]</p>"
+          },
           {
             "group": "Parameter",
             "type": "String",
@@ -186,7 +193,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"id\": 1, \"contact\" : 99714808XXX \n}"
+          "content": "{\n\t\"contacts\":\n\t\t{\n\t\t\t\"4\":{\"id\":4,\"contact\":91989724677},\n\t\t\t\"10\":{\"errors\":[\"Contact id does not exist.\"]}\n\t\t}\n}"
         }
       ]
     }
