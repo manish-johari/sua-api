@@ -106,9 +106,9 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "Array",
-            "field": "user[contact]",
+            "field": "user[contacts]",
             "optional": false,
-            "description": "Provide the array of contact numbers of user. <p>eg. [\"121\", \"+9112345678\", \"09971480801\", \"902135689\", \"00969989745*6\", \"*121*2#\"]</p>"
+            "description": "Provide the array of contact numbers of user. <p>eg. [\"121\", \"+9112345678\", \"09971480801\"]</p>"
           },
           {
             "group": "Parameter",
@@ -124,7 +124,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"contact\":\n\t\t{\n\t\t\t\"121\": {\"errors\": [\"Contact is not valid.\"]},\n\t\t\t\"+9112345678\":{\"id\":9,\"contact\":9112345678,\"is_existing\":false},\n\t\t\t\"09971480801\":{\"id\":1,\"contact\":919971480801,\"is_existing\":true}\n\t\t} \n}"
+          "content": "{\n\t\"contacts\":\n\t\t{\n\t\t\t\"121\": {\"errors\": [\"Contact is not valid.\"]},\n\t\t\t\"+9112345678\":{\"id\":9,\"contact\":9112345678,\"is_existing\":false},\n\t\t\t\"09971480801\":{\"id\":1,\"contact\":919971480801,\"is_existing\":true}\n\t\t} \n}"
         }
       ]
     }
