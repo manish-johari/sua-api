@@ -164,9 +164,9 @@ define({ api: [
   {
     "type": "delete",
     "url": "/contacts/:id",
-    "title": "Delete Contacts",
-    "name": "delete_contacts",
-    "description": "API will delete user's contacts.",
+    "title": "Delete Contact",
+    "name": "delete_contact",
+    "description": "API will delete user's contact.",
     "group": "Contact",
     "version": "1",
     "parameter": {
