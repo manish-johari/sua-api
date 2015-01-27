@@ -162,6 +162,37 @@ define({ api: [
   },
 
   {
+    "type": "delete",
+    "url": "/contacts/:id",
+    "title": "Delete Contacts",
+    "name": "delete_contacts",
+    "description": "API will delete user's contacts.",
+    "group": "Contact",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\"id\": 1, \"contact\" : 99714808XXX \n}"
+        }
+      ]
+    }
+  },
+
+  {
     "type": "post",
     "url": "/profile",
     "title": "Create Profile",
