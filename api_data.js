@@ -177,7 +177,7 @@ define({ api: [
             "type": "Array",
             "field": "id",
             "optional": false,
-            "description": "Provide the array of contact id of user. <p>eg. [\"4\", \"10\"]</p>"
+            "description": "Provide the array of contact id of user. <p>eg. [\"4\", \"10\"] <br/> Note: Contact with id 4 is valid.</p>"
           },
           {
             "group": "Parameter",
@@ -193,7 +193,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"contacts\":\n\t\t{\n\t\t\t\"4\":{\"id\":4,\"contact\":91989724677},\n\t\t\t\"10\":{\"errors\":[\"Contact id does not exist.\"]}\n\t\t}\n}"
+          "content": "{\n\t\"contacts\":\n\t\t[\n\t\t\t\{\"id\":4,\"contact\":91989724677}\n\t\t]\n}"
         }
       ]
     }
