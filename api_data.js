@@ -177,7 +177,7 @@ define({ api: [
             "type": "Array",
             "field": "id",
             "optional": false,
-            "description": "Provide the array of contact id of user. <p>eg. [\"4\", \"10\"] <br/> Note: Contact with id 4 is valid.</p>"
+            "description": "Provide the array of contact id of user. <p>eg. [\"4\", \"5\", \"10\"] <br/> Note: Contact with id 4 and 5 are valid.</p>"
           },
           {
             "group": "Parameter",
@@ -193,7 +193,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"contacts\":\n\t\t[\n\t\t\t\{\"id\":4,\"contact\":91989724677}\n\t\t]\n}"
+          "content": "{\n\t\"contacts\":\n\t\t[\n\t\t\t\{\"id\":4,\"contact\":91989724677}, \n\t\t\t\{\"id\":5,\"contact\":9198xxxxxx}\n\t\t]\n}"
         }
       ]
     }
