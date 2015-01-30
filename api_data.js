@@ -290,6 +290,20 @@ define({ api: [
             "optional": false,
             "description": "Provide the name of group."
           },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "group[group_image_attributes][media]",
+            "optional": false,
+            "description": "Provide the image of group."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
         ]
         }
     },
@@ -334,6 +348,13 @@ define({ api: [
             "field": "group[group_id]",
             "optional": false,
             "description": "Provide the Array of group ids to be added in group."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
           },
         ]
         }
