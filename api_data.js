@@ -272,6 +272,81 @@ define({ api: [
     }
   },
 
+  {
+    "type": "post",
+    "url": "/groups",
+    "title": "Create Group",
+    "name": "create_group",
+    "description": "API will create user's group.",
+    "group": "Group",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "group[name]",
+            "optional": false,
+            "description": "Provide the name of group."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"id\" : 8,\n\t\"name\" : \"Group Name\" \n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "post",
+    "url": "/groups/add_contacts",
+    "title": "Add Contacts",
+    "name": "add_contact",
+    "description": "API will add contacts to user's group.",
+    "group": "Group",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "group[id]",
+            "optional": false,
+            "description": "Provide the id of group."
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "field": "group[contact_id]",
+            "optional": false,
+            "description": "Provide the Array of contact ids to be added in group."
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "field": "group[group_id]",
+            "optional": false,
+            "description": "Provide the Array of group ids to be added in group."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"group_id\":7,\"group_contacts\":[14,13] \n}"
+        }
+      ]
+    }
+  },
 
 
 ]});
