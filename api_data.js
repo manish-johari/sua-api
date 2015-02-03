@@ -369,5 +369,123 @@ define({ api: [
     }
   },
 
+  {
+    "type": "get",
+    "url": "/groups",
+    "title": "List Groups",
+    "name": "groups",
+    "description": "API will list user's groups.",
+    "group": "Group",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t{\"id\":6,\"name\":\"G1\",\"image_url\":null}, \n\t {\"id\":11,\"name\":\"G4\",\"image_url\":\"/system/attachment/group_images/media/007/small/image.png\"} \n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "get",
+    "url": "/groups/:id/edit",
+    "title": "Edit Group",
+    "name": "edit_group",
+    "description": "API will edit user's group.",
+    "group": "Group",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t \"id\":6,\"name\":\"G1\",\"contact_ids\":[13,17],\"image_url\":null \n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "put",
+    "url": "/groups/:id",
+    "title": "Update Group",
+    "name": "update_group",
+    "description": "API will update user's group.",
+    "group": "Group",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "group[name]",
+            "optional": false,
+            "description": "Provide the name of group."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "group[group_image_attributes][media]",
+            "optional": false,
+            "description": "Provide the image of group."
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "field": "group[contact_id]",
+            "optional": false,
+            "description": "Provide the Array of contact ids to be added in group."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t \"id\":6,\"name\":\"G1\",\"contact_ids\":[13,17],\"image_url\":null \n}"
+        }
+      ]
+    }
+  },
+
+
+
+
+
 
 ]});
