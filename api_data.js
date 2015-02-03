@@ -394,7 +394,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t{\"id\":6,\"name\":\"G1\",\"image_url\":null}, \n\t {\"id\":11,\"name\":\"G4\",\"image_url\":\"/system/attachment/group_images/media/007/small/image.png\"} \n}"
+          "content": "[\n\t{\"id\":6,\"name\":\"G1\",\"image_url\":null}, \n\t {\"id\":11,\"name\":\"G4\",\"image_url\":\"/system/attachment/group_images/media/007/small/image.png\"} \n]"
         }
       ]
     }
@@ -482,6 +482,38 @@ define({ api: [
       ]
     }
   },
+
+  {
+    "type": "delete",
+    "url": "/groups/:id",
+    "title": "Delete Group",
+    "name": "delete_group",
+    "description": "API will delete user's group.",
+    "group": "Group",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t \"message\":\"ok\" \n}"
+        }
+      ]
+    }
+  },
+
 
 
 
