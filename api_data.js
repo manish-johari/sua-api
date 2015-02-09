@@ -266,7 +266,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"Ok\" \n}"
+          "content": "{\n\t\"name\":\"johari\",\n\t\"date_of_birth\":\"1989-06-27\",\n\t\"gender\":\"m\",\n\t\"status\":\"status message\",\n\t\"email\":\"joharimani@gmail.com\",\n\t\"image_url\":null,\n\t\"updated_at\":\"2015-02-09T07:58:25.613Z\" \n}"
         }
       ]
     }
