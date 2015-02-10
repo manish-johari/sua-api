@@ -240,7 +240,7 @@ define({ api: [
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "File",
             "field": "profile[profile_image_attributes][media]",
             "optional": false,
             "description": "Provide the profile Image."
@@ -292,7 +292,7 @@ define({ api: [
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "File",
             "field": "group[group_image_attributes][media]",
             "optional": false,
             "description": "Provide the image of group."
@@ -451,7 +451,7 @@ define({ api: [
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "File",
             "field": "group[group_image_attributes][media]",
             "optional": false,
             "description": "Provide the image of group."
@@ -509,6 +509,51 @@ define({ api: [
         {
           "title": "Success (200):",
           "content": "{\n\t \"message\":\"ok\" \n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "post",
+    "url": "/events",
+    "title": "Create event",
+    "name": "create_event",
+    "description": "API will create event.",
+    "group": "Event",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[title]",
+            "optional": false,
+            "description": "Provide title of event."
+          },
+          {
+            "group": "Parameter",
+            "type": "File",
+            "field": "event[event_image_attributes][media]",
+            "optional": false,
+            "description": "Provide image for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"title\": \"My Event\", \n\t\"image_url\": \"image_url\" \n}"
         }
       ]
     }
