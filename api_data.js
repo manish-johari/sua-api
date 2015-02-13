@@ -553,7 +553,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"title\": \"My Event\", \n\t\"image_url\": \"image_url\" \n}"
+          "content": "{\n\t\"id\": \"1\", \n\t\"title\": \"My Event\", \n\t\"image_url\": \"image_url\" \n}"
         }
       ]
     }
