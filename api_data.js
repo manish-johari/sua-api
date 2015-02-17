@@ -559,7 +559,57 @@ define({ api: [
     }
   },
 
-
+  {
+    "type": "post",
+    "url": "/invitees",
+    "title": "Invite Contacts",
+    "name": "invite_contacts",
+    "description": "API will invite contacts to event.",
+    "group": "Event",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "invite[id]",
+            "optional": false,
+            "description": "Provide id of event."
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "field": "invite[contact_id]",
+            "optional": false,
+            "description": "Provide array of contact ids to be invited for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "field": "invite[group_id]",
+            "optional": false,
+            "description": "Provide array of group ids to be invited for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"id\": \"1\", \n\t\"unregisted_contact_ids\": [\"13\", \"14\"] \n}"
+        }
+      ]
+    }
+  },
 
 
 
