@@ -605,7 +605,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"id\": \"1\", \n\t\"unregisted_contact_ids\": [\"13\", \"14\"] \n}"
+          "content": "{\n\t\"id\": \"1\", \n\t\"title\": \"Event title\", \n\t\"unregisted_contact_ids\": [\"13\", \"14\"] \n}"
         }
       ]
     }
