@@ -775,6 +775,36 @@ define({ api: [
     }
   },
 
+  {
+    "type": "get",
+    "url": "/events",
+    "title": "Upcoming Events",
+    "name": "upcoming",
+    "description": "API will list all upcoming events.",
+    "group": "Event",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\[\n\t\t\"id\": \"1\", \n\t\t\"title\": \"Event title\", \n\t\t\"image_url\": \"url_path\" , \n\t\t\"admin_id\": \"1\" \n\t\]\n}"
+        }
+      ]
+    }
+  },
 
 
 
