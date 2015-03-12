@@ -806,6 +806,222 @@ define({ api: [
     }
   },
 
+  {
+    "type": "get",
+    "url": "/events",
+    "title": "Past Events",
+    "name": "past",
+    "description": "API will list all past events.",
+    "group": "Event",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "q",
+            "optional": false,
+            "description": "Provide value 'p', e.g. \"q=p\" to list all past events."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\[\n\t\t\"id\": \"1\", \n\t\t\"title\": \"Event title\", \n\t\t\"image_url\": \"url_path\" , \n\t\t\"admin_id\": \"1\" \n\t\]\n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "post",
+    "url": "/events/:id",
+    "title": "Update event",
+    "name": "update_event",
+    "description": "API will update event.",
+    "group": "Event",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[title]",
+            "optional": false,
+            "description": "Provide title of event."
+          },
+          {
+            "group": "Parameter",
+            "type": "File",
+            "field": "event[event_image_attributes][media]",
+            "optional": false,
+            "description": "Provide image for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[start_date]",
+            "optional": false,
+            "description": "Provide start date of event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[end_date]",
+            "optional": false,
+            "description": "Provide end date of event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[lat]",
+            "optional": false,
+            "description": "Provide latitude."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[long]",
+            "optional": false,
+            "description": "Provide longitude."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[location]",
+            "optional": false,
+            "description": "Provide location of event."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[all_day]",
+            "optional": false,
+            "description": "true/false."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[start_time]",
+            "optional": false,
+            "description": "Provide Start time of event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[end_time]",
+            "optional": false,
+            "description": "Provide End time of event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[last_day_to_confirm]",
+            "optional": false,
+            "description": "Provide last_day_to_confirm for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[bringing_guest]",
+            "optional": false,
+            "description": "Provide true/false if bringing_guest."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[description]",
+            "optional": false,
+            "description": "Provide description for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[rsvp_for_adult_and_guest]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[limit_rsvp]",
+            "optional": false,
+            "description": "Provide true/false "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[max_capacity]",
+            "optional": false,
+            "description": "Provide max_capacity for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[dress_code]",
+            "optional": false,
+            "description": "Provide dress_code for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event[cost]",
+            "optional": false,
+            "description": "Provide cost per person for event."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[allow_voting]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[disable_chat]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[hide_guest_list]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\"id\": \"1\", \n\t\"title\": \"My Event\", \n\t\"image_url\": \"image_url\" \n}"
+        }
+      ]
+    }
+  },
+
 
 
 
