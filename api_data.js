@@ -1022,6 +1022,37 @@ define({ api: [
     }
   },
 
+  {
+    "type": "delete",
+    "url": "/events/:id",
+    "title": "Delete event",
+    "name": "delete_event",
+    "description": "API will delete user's event.",
+    "group": "Event",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t \"id\":\"1\" \n}"
+        }
+      ]
+    }
+  },
+
 
 
 
