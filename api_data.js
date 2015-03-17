@@ -24,6 +24,13 @@ define({ api: [
             "field": "user[phone_num]",
             "optional": false,
             "description": "Provide the phone_num."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "deviice[id]",
+            "optional": false,
+            "description": "Provide the device id provided by server on app installation."
           }
         ]
         }
@@ -674,6 +681,20 @@ define({ api: [
           },
           {
             "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[is_cancelled]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[added_at]",
+            "optional": false,
+            "description": "Provide the timestamp of event created at device."
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "field": "auth_token",
             "optional": false,
@@ -1004,6 +1025,13 @@ define({ api: [
           },
           {
             "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[is_cancelled]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "field": "auth_token",
             "optional": false,
@@ -1048,6 +1076,37 @@ define({ api: [
         {
           "title": "Success (200):",
           "content": "{\n\t \"id\":\"1\" \n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "get",
+    "url": "/events/1",
+    "title": "Show Event",
+    "name": "show_event",
+    "description": "API will show event.",
+    "group": "Event",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\"id\":45,\n\t\"title\":\"G3\",\n\t\"image_url\":null,\n\t\"start_date\":\"2012-11-11\",\n\t\"end_date\":\"2012-11-11\",\n\t\"start_time\":\"00:00:00\",\n\t\"end_time\":\n\t\"00:00:00\",\n\t\"lat\":\n\t\"20.2\",\n\t\"long\":\"40.4\",\n\t\"location\":\"kiwitech\",\n\t\"all_day\":false,\n\t\"last_day_to_confirm\":2,\n\t\"bringing_guest\":true,\n\t\"rsvp_for_adult_and_guest\":false,\n\t\"limit_rsvp\":true,\n\t\"max_capacity\":20,\n\t\"dress_code\":\"formal\",\n\t\"cost\":4.99,\n\t\"allow_voting\":true,\n\t\"disable_chat\":true,\n\t\"hide_guest_list\":false,\n\t\"is_cancelled\":false,\n\t\"added_at\":\"12345\",\n\t\"admin_id\":1\n}"
         }
       ]
     }
