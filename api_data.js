@@ -866,7 +866,7 @@ define({ api: [
   },
 
   {
-    "type": "post",
+    "type": "put",
     "url": "/events/:id",
     "title": "Update event",
     "name": "update_event",
