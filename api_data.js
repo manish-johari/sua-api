@@ -1151,7 +1151,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"id\":45\n}"
+          "content": "{\n\t\"id\":1\n}"
         }
       ]
     }
