@@ -1112,6 +1112,51 @@ define({ api: [
     }
   },
 
+  {
+    "type": "delete",
+    "url": "/invitees/1",
+    "title": "Remove invitees",
+    "name": "remove_invitees",
+    "description": "API will remove invitees from event.",
+    "group": "Event",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "invitees[contacts][][id]",
+            "optional": false,
+            "description": "Provide id of contact to be removed."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "invitees[contacts][][is_pending]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\"id\":45\n}"
+        }
+      ]
+    }
+  },
+
 
 
 
