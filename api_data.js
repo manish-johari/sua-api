@@ -208,7 +208,7 @@ define({ api: [
 
   {
     "type": "post",
-    "url": "/profile",
+    "url": "/profiles",
     "title": "Create Profile",
     "name": "create_profile",
     "description": "API will create user's profile.",
@@ -1171,6 +1171,81 @@ define({ api: [
     }
   },
 
+  {
+    "type": "post",
+    "url": "/devices",
+    "title": "Register device",
+    "name": "device",
+    "description": "API will register user's device.",
+    "group": "Login",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "device[device_type]",
+            "optional": false,
+            "description": "Provide the device type. e.g. Value 'Android'"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "device[device_id]",
+            "optional": false,
+            "description": "Provide the device_id."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "device[token]",
+            "optional": false,
+            "description": "Provide GCM token."
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"id\" : 8,\n\t\"status\" : \"ok\" \n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "get",
+    "url": "/profiles/:id",
+    "title": "View Profile",
+    "name": "profile",
+    "description": "API will show profile of contact.",
+    "group": "Profile",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\"name\":\"Manish\",\n\t\"date_of_birth\":null,\n\t\"gender\":\"m\",\n\t\"status\":null,\n\t\"email\":\"\",\n\t\"image_url\":null\n}"
+        }
+      ]
+    }
+  },
 
 
 
