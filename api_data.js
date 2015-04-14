@@ -1534,4 +1534,139 @@ define({ api: [
     }
   },
 
+  {
+    "type": "post",
+    "url": "event_time_suggestions",
+    "title": "Time",
+    "name": "Time",
+    "description": "API will Create a Suggestion for event Time. On which Invitees can vote later",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_time_suggestion[event_id]",
+            "optional": false,
+            "description": "Provide the event id"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event_time_suggestion[start_date]",
+            "optional": false,
+            "description": "Provide the suggested start date"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event_time_suggestion[start_time]",
+            "optional": false,
+            "description": "Provide the suggested start time"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event_time_suggestion[end_date]",
+            "optional": false,
+            "description": "Provide the suggested end date"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event_time_suggestion[end_time]",
+            "optional": true,
+            "description": "Provide the suggested end time"
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"id\":\"4\"\n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "post",
+    "url": "event_time_suggestion_votes",
+    "title": "Time",
+    "name": "Time",
+    "description": "API will upvote a Suggestion for event Timing",
+    "group": "Voting",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_about_suggestion_id",
+            "optional": false,
+            "description": "Provide the event time suggestion id"
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"status\":\"OK\"\n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "post",
+    "url": "event_time_suggestions/:id/lock",
+    "title": "Time Suggestion",
+    "name": "Time",
+    "description": "API will locked the suggestion and become the Timing for event",
+    "group": "Lock",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{}"
+        }
+      ]
+    }
+  },
+
 ]});
