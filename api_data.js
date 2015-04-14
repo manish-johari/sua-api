@@ -1389,4 +1389,35 @@ define({ api: [
     }
   },
 
+  {
+    "type": "post",
+    "url": "event_location_suggestions/:id/lock",
+    "title": "Location Suggestion",
+    "name": "Location",
+    "description": "API will locked the suggestion and become the location for event",
+    "group": "Lock",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{}"
+        }
+      ]
+    }
+  },
+
 ]});
