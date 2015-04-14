@@ -1247,6 +1247,65 @@ define({ api: [
     }
   },
 
+  {
+    "type": "post",
+    "url": "invitees/rsvp",
+    "title": "RSVP",
+    "name": "RSVP",
+    "description": "API will update invitee rsvp status.",
+    "group": "Invitee",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "invitee[event_id]",
+            "optional": false,
+            "description": "Provide the event id"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "invitee[rsvp]",
+            "optional": false,
+            "description": "Provide the rsvp. possible values are 'yes', 'no', 'maybe'."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "invitee[adults]",
+            "optional": true,
+            "description": "Provide Number of Adult guests"
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "invitee[kids]",
+            "optional": true,
+            "description": "Provide Number of kid guests"
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"rsvp\":\"yes\"\n}"
+        }
+      ]
+    }
+  },
+
 
 
 ]});
