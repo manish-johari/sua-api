@@ -1089,7 +1089,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t \"id\":\"1\" \n}"
+          "content": "{\n\t \"message\":\"ok\" \n}"
         }
       ]
     }
@@ -1664,6 +1664,37 @@ define({ api: [
         {
           "title": "Success (200):",
           "content": "{}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "delete",
+    "url": "/invitees/:id/leave",
+    "title": "Leave Event",
+    "name": "leave_event",
+    "description": "API will leave user's event.",
+    "group": "Invitee",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t \"message\":\"ok\" \n}"
         }
       ]
     }
