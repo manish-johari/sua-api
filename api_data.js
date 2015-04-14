@@ -1420,4 +1420,118 @@ define({ api: [
     }
   },
 
+  {
+    "type": "post",
+    "url": "event_about_suggestions",
+    "title": "About",
+    "name": "About",
+    "description": "API will Create a Suggestion for event Description. On which Invitees can vote later",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_about_suggestion[event_id]",
+            "optional": false,
+            "description": "Provide the event id"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event_about_suggestion[description]",
+            "optional": false,
+            "description": "Provide the suggested Description"
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"id\":\"4\"\n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "post",
+    "url": "event_about_suggestion_votes",
+    "title": "About",
+    "name": "About",
+    "description": "API will upvote a Suggestion for event Description",
+    "group": "Voting",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_about_suggestion_id",
+            "optional": false,
+            "description": "Provide the event address suggestion id"
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"status\":\"OK\"\n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "post",
+    "url": "event_address_suggestions/:id/lock",
+    "title": "Address Suggestion",
+    "name": "Address",
+    "description": "API will locked the suggestion and become the Description for event",
+    "group": "Lock",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{}"
+        }
+      ]
+    }
+  },
+
 ]});
