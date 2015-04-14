@@ -1306,6 +1306,87 @@ define({ api: [
     }
   },
 
+  {
+    "type": "post",
+    "url": "event_location_suggestions",
+    "title": "Location",
+    "name": "Location",
+    "description": "API will Create a Suggestion for event location. On which Invitees can vote later",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_location_suggestion[event_id]",
+            "optional": false,
+            "description": "Provide the event id"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "event_location_suggestion[address]",
+            "optional": false,
+            "description": "Provide the suggested address"
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"id\":\"4\"\n}"
+        }
+      ]
+    }
+  },
 
+  {
+    "type": "post",
+    "url": "event_location_suggestion_votes",
+    "title": "Location",
+    "name": "Location",
+    "description": "API will upvote a Suggestion for event location",
+    "group": "Voting",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_location_suggestion_id",
+            "optional": false,
+            "description": "Provide the event location suggestion id"
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\n\t\"status\":\"OK\"\n}"
+        }
+      ]
+    }
+  },
 
 ]});
