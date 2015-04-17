@@ -807,7 +807,7 @@ define({ api: [
     "type": "get",
     "url": "/events",
     "title": "List Events",
-    "name": "upcoming",
+    "name": "events",
     "description": "API will list all events.",
     "group": "Event",
     "version": "1",
