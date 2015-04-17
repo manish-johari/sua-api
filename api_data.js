@@ -806,9 +806,9 @@ define({ api: [
   {
     "type": "get",
     "url": "/events",
-    "title": "Upcoming Events",
+    "title": "List Events",
     "name": "upcoming",
-    "description": "API will list all upcoming events.",
+    "description": "API will list all events.",
     "group": "Event",
     "version": "1",
     "parameter": {
@@ -817,40 +817,9 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
-            "field": "auth_token",
-            "optional": false,
-            "description": "Provide authentication token of user."
-          },
-        ]
-        }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "Success (200):",
-          "content": "{\n\t\[\n\t\t\"id\": \"1\", \n\t\t\"title\": \"Event title\", \n\t\t\"image_url\": \"url_path\" , \n\t\t\"admin_id\": \"1\" \n\t\]\n}"
-        }
-      ]
-    }
-  },
-
-  {
-    "type": "get",
-    "url": "/events",
-    "title": "Past Events",
-    "name": "past",
-    "description": "API will list all past events.",
-    "group": "Event",
-    "version": "1",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "q",
-            "optional": false,
-            "description": "Provide value 'p', e.g. \"q=p\" to list all past events."
+            "field": "latest_updated_at",
+            "optional": true,
+            "description": "Provide latest_updated_at timestamp."
           },
           {
             "group": "Parameter",
@@ -866,7 +835,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\[\n\t\t\"id\": \"1\", \n\t\t\"title\": \"Event title\", \n\t\t\"image_url\": \"url_path\" , \n\t\t\"admin_id\": \"1\" \n\t\]\n}"
+          "content": "{\n\t\"events\":\n\t\t{\n\t\t\"latest_updated_at\" : \"2015-04-17T07:53:17.524Z\",\n\t\t\"created\" :  [\n\t\t\t\t\t{\n\t\t\t\t\t\"id\":6,\n\t\t\t\t\t\"start_time\":\"2016-10-11T11:20:00.000Z\"\n\t\t\t\t\t\}\n\t\t\t\t],\n\t\t\"updated\" : [\n\t\t\t\t\t{\n\t\t\t\t\t\"id\":5,\n\t\t\t\t\t\"start_time\":\"2016-11-11T11:20:00.000Z\"\n\t\t\t\t\t\}\n\t\t\t\t],\n\t\t\"deleted\":[6]\n\t\t}\n}"
         }
       ]
     }
