@@ -714,7 +714,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"id\": \"1\", \n\t\"title\": \"My Event\", \n\t\"image_url\": \"image_url\" \n}"
+          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-01T04:33:03.863Z\" \n}"
         }
       ]
     }
@@ -835,7 +835,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"events\":\n\t\t{\n\t\t\"latest_updated_at\" : \"2015-04-17T07:53:17.524Z\",\n\t\t\"created\" :  [\n\t\t\t\t\t{\n\t\t\t\t\t\"id\":6,\n\t\t\t\t\t\"start_time\":\"2016-10-11T11:20:00.000Z\"\n\t\t\t\t\t\}\n\t\t\t\t],\n\t\t\"updated\" : [\n\t\t\t\t\t{\n\t\t\t\t\t\"id\":5,\n\t\t\t\t\t\"start_time\":\"2016-11-11T11:20:00.000Z\"\n\t\t\t\t\t\}\n\t\t\t\t],\n\t\t\"deleted\":[6]\n\t\t}\n}"
+          "content": "{\n\t\"events\":\n\t\t{\n\t\t\"latest_updated_at\" : \"2015-04-17T07:53:17.524Z\",\n\t\t\"created\" :  [\n\t\t\t\t\t{\n\t\t\t\t\t\"id\":6,\n\t\t\t\t\t\"start_time\":\"2016-10-11T11:20:00.000Z\",\n\t\t\t\t\t\"end_time\":\"2016-11-11T11:20:00.000Z\",\n\t\t\t\t\t\"updated_at\":\"2016-11-11T11:20:00.000Z\",\n\t\t\t\t\t\"invitee_list_updated_at\":\"2016-11-11T11:20:00.000Z\"\n\t\t\t\t\t\}\n\t\t\t\t],\n\t\t\"updated\" : [\n\t\t\t\t\t{\n\t\t\t\t\t\"id\":5,\n\t\t\t\t\t\"start_time\":\"2016-11-11T11:20:00.000Z\",\n\t\t\t\t\t\"end_time\":\"2016-12-11T11:20:00.000Z\",\n\t\t\t\t\t\"updated_at\":\"2016-11-11T11:20:00.000Z\",\n\t\t\t\t\t\"invitee_list_updated_at\":\"2016-11-11T11:20:00.000Z\"\n\t\t\t\t\t\}\n\t\t\t\t],\n\t\t\"deleted\":[6]\n\t\t}\n}"
         }
       ]
     }
