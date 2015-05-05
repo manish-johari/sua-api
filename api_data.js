@@ -734,23 +734,30 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
-            "field": "invite[id]",
+            "field": "invitees[created][]",
+            "optional": false,
+            "description": "Provide Contact number of invitee."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "invitees[created][]",
+            "optional": false,
+            "description": "Provide Contact number of invitee."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "invitees[deleted][]",
+            "optional": false,
+            "description": "Provide Contact number of invitee."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_id",
             "optional": false,
             "description": "Provide id of event."
-          },
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "field": "invite[contact_id]",
-            "optional": false,
-            "description": "Provide array of contact ids to be invited for event."
-          },
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "field": "invite[group_id]",
-            "optional": false,
-            "description": "Provide array of group ids to be invited for event."
           },
           {
             "group": "Parameter",
@@ -759,14 +766,15 @@ define({ api: [
             "optional": false,
             "description": "Provide authentication token of user."
           },
+
         ]
         }
     },
     "success": {
       "examples": [
         {
-          "title": "Success (201):",
-          "content": "{\n\t\"id\": \"1\", \n\t\"title\": \"Event title\", \n\t\"unregisted_contact_ids\": [\"13\", \"14\"] \n}"
+          "title": "Success (200):",
+          "content": "{\n\t\"invitee_list_updated_at\": \"2015-05-03T05:11:43.704Z\", \n\t\"invitees\": [\n\t\t{\n\t\t\t\"contacts\": \"+919971480801\", \n\t\t\t\"seeyouall_id\": 4\n\t\t}\n\t] \n}"
         }
       ]
     }
@@ -1664,6 +1672,37 @@ define({ api: [
         {
           "title": "Success (200):",
           "content": "{\n\t \"message\":\"ok\" \n}"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "get",
+    "url": "/events/:id/invitees",
+    "title": "Event Invitees",
+    "name": "invitees",
+    "description": "API will show invitees detail.",
+    "group": "Invitee",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t\"invitee_list_updated_at\":\"2015-05-05T06:28:32.540Z\",\n\t\"created\": [\n\t\t{\n\t\t\t\"seeyouall_id\": \"\", \n\t\t\t\"contact\": \"+919971480801\", \n\t\t\t\"rsvp\": \"\"\n\t\t}\n\t],\n\t\"updated\": [],\n\t\"deleted\": [\n\t\t{\n\t\t\t\"seeyouall_id\": \"2\", \n\t\t\t\"contact\": \"+919971480801\", \n\t\t\t\"rsvp\": \"default\"\n\t\t}\n\t] \n}"
         }
       ]
     }
