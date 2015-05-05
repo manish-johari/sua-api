@@ -1691,6 +1691,13 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
+            "field": "latest_updated_at",
+            "optional": true,
+            "description": "Provide timestamp of invitee_list_updated_at."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
             "field": "auth_token",
             "optional": false,
             "description": "Provide authentication token of user."
