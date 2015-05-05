@@ -105,7 +105,7 @@ define({ api: [
     "title": "Create Contact",
     "name": "create_contact",
     "description": "API will create user's contact.",
-    "group": "Contact",
+    "group": "Contact---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
@@ -143,7 +143,7 @@ define({ api: [
     "title": "Show Contacts",
     "name": "show_contacts",
     "description": "API will show user's contacts.",
-    "group": "Contact",
+    "group": "Contact---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
@@ -174,7 +174,7 @@ define({ api: [
     "title": "Delete Contact",
     "name": "delete_contact",
     "description": "API will delete user's contact.",
-    "group": "Contact",
+    "group": "Contact---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
@@ -285,7 +285,7 @@ define({ api: [
     "title": "Create Group",
     "name": "create_group",
     "description": "API will create user's group.",
-    "group": "Group",
+    "group": "Group---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
@@ -330,7 +330,7 @@ define({ api: [
     "title": "Add Contacts",
     "name": "add_contact",
     "description": "API will add contacts to user's group.",
-    "group": "Group",
+    "group": "Group---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
@@ -382,7 +382,7 @@ define({ api: [
     "title": "List Groups",
     "name": "groups",
     "description": "API will list user's groups.",
-    "group": "Group",
+    "group": "Group---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
@@ -413,7 +413,7 @@ define({ api: [
     "title": "Edit Group",
     "name": "edit_group",
     "description": "API will edit user's group.",
-    "group": "Group",
+    "group": "Group---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
@@ -444,7 +444,7 @@ define({ api: [
     "title": "Update Group",
     "name": "update_group",
     "description": "API will update user's group.",
-    "group": "Group",
+    "group": "Group---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
@@ -496,7 +496,7 @@ define({ api: [
     "title": "Delete Group",
     "name": "delete_group",
     "description": "API will delete user's group.",
-    "group": "Group",
+    "group": "Group---Deprecated",
     "version": "1",
     "parameter": {
       "fields": {
