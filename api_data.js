@@ -714,7 +714,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-01T04:33:03.863Z\" \n}"
+          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-01T04:33:03.863Z\", \n\t\"image_url\": \"http://seeyouall-staging.s3.amazonaws.com/event_image/16/small-currentResult.png\" \n}"
         }
       ]
     }
