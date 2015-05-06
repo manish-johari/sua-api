@@ -28,7 +28,7 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "Integer",
-            "field": "deviice[id]",
+            "field": "device[id]",
             "optional": false,
             "description": "Provide the device id provided by server on app installation."
           }
