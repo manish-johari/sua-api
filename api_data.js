@@ -1106,7 +1106,7 @@ define({ api: [
   {
     "type": "delete",
     "url": "/invitees/1",
-    "title": "Remove invitees",
+    "title": "Remove invitees--Deprecated",
     "name": "remove_invitees",
     "description": "API will remove invitees from event.",
     "group": "Event",
