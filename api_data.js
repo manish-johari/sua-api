@@ -1035,7 +1035,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"id\": \"1\", \n\t\"title\": \"My Event\", \n\t\"image_url\": \"image_url\" \n}"
+          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-07T07:42:14.098Z\", \n\t\"image_url\": \"http://seeyouall-staging.s3.amazonaws.com/event_image/17/small-currentResult.png\" \n}"
         }
       ]
     }
