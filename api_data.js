@@ -748,14 +748,21 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
-            "field": "invitees[deleted][]",
+            "field": "invitees[deleted][][contact]",
+            "optional": false,
+            "description": "Provide Contact number of invitee."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "invitees[deleted][][seeyouall_id]",
             "optional": false,
             "description": "Provide Contact number of invitee."
           },
           {
             "group": "Parameter",
             "type": "Integer",
-            "field": "event_id",
+            "field": "invitees[event_id]",
             "optional": false,
             "description": "Provide id of event."
           },
