@@ -757,7 +757,7 @@ define({ api: [
             "type": "String",
             "field": "invitees[deleted][][seeyouall_id]",
             "optional": false,
-            "description": "Provide Contact number of invitee."
+            "description": "Provide seeyouall_id of Contact number of invitee."
           },
           {
             "group": "Parameter",
