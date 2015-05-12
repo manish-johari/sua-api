@@ -1044,6 +1044,20 @@ define({ api: [
           },
           {
             "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[is_start_time_updated]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "field": "event[is_end_time_updated]",
+            "optional": false,
+            "description": "Provide true/false."
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "field": "auth_token",
             "optional": false,
@@ -1056,7 +1070,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-07T07:42:14.098Z\", \n\t\"image_url\": \"http://seeyouall-staging.s3.amazonaws.com/event_image/17/small-currentResult.png\" \n}"
+          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-07T07:42:14.098Z\", \n\t\"image_url\": \"http://seeyouall-staging.s3.amazonaws.com/event_image/17/small-currentResult.png\", \n\t\"is_start_time_updated\": true, \n\t\"is_end_time_updated\": true \n}"
         }
       ]
     }
