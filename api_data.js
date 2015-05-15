@@ -1574,23 +1574,9 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
-            "field": "event_time_suggestion[start_date]",
-            "optional": false,
-            "description": "Provide the suggested start date"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
             "field": "event_time_suggestion[start_time]",
             "optional": false,
             "description": "Provide the suggested start time"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event_time_suggestion[end_date]",
-            "optional": false,
-            "description": "Provide the suggested end date"
           },
           {
             "group": "Parameter",
