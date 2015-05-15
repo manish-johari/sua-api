@@ -1395,7 +1395,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"status\":\"OK\"\n}"
+          "content": "{\n\t\"vote_count\":\"3\",\n\t\"self_voted\":\"true\"\n}"
         }
       ]
     }
@@ -1509,7 +1509,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"status\":\"OK\"\n}"
+          "content": "{\n\t\"vote_count\":\"3\",\n\t\"self_voted\":\"true\"\n}"
         }
       ]
     }
@@ -1630,7 +1630,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"status\":\"OK\"\n}"
+          "content": "{\n\t\"vote_count\":\"3\",\n\t\"self_voted\":\"true\"\n}"
         }
       ]
     }
