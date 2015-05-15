@@ -1736,4 +1736,96 @@ define({ api: [
     }
   },
 
+  {
+    "type": "get",
+    "url": "/events/:event_id/event_time_suggestions",
+    "title": "Get Times",
+    "name": "GetTime",
+    "description": "API will Grab all Suggestions for event Time.",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "[\n\t{\n\t\"id\":\"4\", \n\t\"start_time\":\"null\", \n\t\"end_time\":\"null\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}, \n\t{\n\t\"id\":\"5\", \n\t\"start_time\":\"null\", \n\t\"end_time\":\"null\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}\n\t\]"
+        }
+      ]
+    }
+  },
+
+  {
+    "type": "get",
+    "url": "/events/:event_id/event_location_suggestions",
+    "title": "Get Locations",
+    "name": "GetLocations",
+    "description": "API will Grab all Suggestions for event location.",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "[\n\t{\n\t\"id\":\"4\", \n\t\"address\":\"new adddress\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}, \n\t{\n\t\"id\":\"5\", \n\t\"address\":\"Another addrees\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}\n\t\]"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/events/:event_id/event_about_suggestions",
+    "title": "Get Address",
+    "name": "GetAddress",
+    "description": "API will Grab all Suggestions for event location.",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "[\n\t{\n\t\"id\":\"4\", \n\t\"description\":\"new desc\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}, \n\t{\n\t\"id\":\"5\", \n\t\"description\":\"Desc\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}\n\t\]"
+        }
+      ]
+    }
+  },
+
 ]});
