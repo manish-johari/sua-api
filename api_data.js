@@ -1827,5 +1827,186 @@ define({ api: [
       ]
     }
   },
+  {
+    "type": "post",
+    "url": "/messages",
+    "title": "ChatText",
+    "name": "Textchat",
+    "description": "API will Post a text chat message.",
+    "group": "Chat",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[body]",
+            "optional": false,
+            "description": "Provide content to be posted in chat."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "message[event_id]",
+            "optional": false,
+            "description": "Provide the event id."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[added_at]",
+            "optional": false,
+            "description": "This time stamp will be used as message creation time stamp."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[message_type]",
+            "optional": false,
+            "description": "This will be used to distiinguish message type. value should be 'ChatText'"
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\"message_id\":\"4\"}"
+        }
+      ]
+    }
+  },
+  {
+    "type": "post",
+    "url": "/messages",
+    "title": "ChatMedia",
+    "name": "ChatMedia",
+    "description": "API will Post a Media file in chat message.",
+    "group": "Chat",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "File",
+            "field": "message[message_media_attributes][media]",
+            "optional": false,
+            "description": "Provide file to be shared."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "message[event_id]",
+            "optional": false,
+            "description": "Provide the event id."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[added_at]",
+            "optional": false,
+            "description": "This time stamp will be used as message creation time stamp."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[message_type]",
+            "optional": false,
+            "description": "This will be used to distiinguish message type. value should be 'ChatMedia'"
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\"message_id\":\"4\"}"
+        }
+      ]
+    }
+  },
+  {
+    "type": "post",
+    "url": "/messages",
+    "title": "ChatLocation",
+    "name": "ChatLocation",
+    "description": "API will sent a location info in chat message.",
+    "group": "Chat",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Float",
+            "field": "message[location_attributes][latittude]",
+            "optional": false,
+            "description": "Provide latitude of the location."
+          },
+          {
+            "group": "Parameter",
+            "type": "Float",
+            "field": "message[location_attributes][longitude]",
+            "optional": false,
+            "description": "Provide longitude of the location."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "message[event_id]",
+            "optional": false,
+            "description": "Provide the event id."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[added_at]",
+            "optional": false,
+            "description": "This time stamp will be used as message creation time stamp."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[message_type]",
+            "optional": false,
+            "description": "This will be used to distinguish message type. value should be 'ChatLocation'"
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\"message_id\":\"4\"}"
+        }
+      ]
+    }
+  },
 
 ]});
