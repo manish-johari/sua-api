@@ -1231,7 +1231,7 @@ define({ api: [
   {
     "type": "get",
     "url": "/profiles/:id",
-    "title": "View Profile",
+    "title": "View Profile --Deprecated",
     "name": "profile",
     "description": "API will show profile of contact.",
     "group": "Profile",
