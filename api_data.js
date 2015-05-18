@@ -2008,5 +2008,137 @@ define({ api: [
       ]
     }
   },
+  {
+    "type": "get",
+    "url": "/messages",
+    "title": "UpwardMessage",
+    "name": "UpwardMessage",
+    "description": "API will sent a bunch of 15 older message from the provided time stamp.",
+    "group": "Chat",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "added_at",
+            "optional": false,
+            "description": "Provide time stamp of the oldest message.example '2015-05-03 07:09:58'"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "q",
+            "optional": false,
+            "description": "Provide just value 'p'."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_id",
+            "optional": false,
+            "description": "Provide the event id."
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "https://gist.github.com/nitinjain-kiwi/fc7632a6f5f24b294c90"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/messages",
+    "title": "RecentMessage",
+    "name": "RecentMessage",
+    "description": "API will sent a bunch of 15 recent message",
+    "group": "Chat",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_id",
+            "optional": false,
+            "description": "Provide the event id."
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "https://gist.github.com/nitinjain-kiwi/fc7632a6f5f24b294c90"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/messages",
+    "title": "Message",
+    "name": "DownwardMessages",
+    "description": "API will sent a bunch of 15 older message from the provided time stamp",
+    "group": "Chat",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "added_at",
+            "optional": false,
+            "description": "Provide time stamp from where you want to get downward messages. example '2015-05-03 07:09:58'"
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "event_id",
+            "optional": false,
+            "description": "Provide the event id."
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "https://gist.github.com/nitinjain-kiwi/fc7632a6f5f24b294c90"
+        }
+      ]
+    }
+  },
 
 ]});
