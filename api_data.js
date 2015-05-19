@@ -1371,6 +1371,20 @@ define({ api: [
             "optional": false,
             "description": "Provide the suggested address"
           },
+          {
+            "group": "Parameter",
+            "type": "FLoat",
+            "field": "event_location_suggestion[longitude]",
+            "optional": false,
+            "description": "Provide the suggested address longitude"
+          },
+          {
+            "group": "Parameter",
+            "type": "Float",
+            "field": "event_location_suggestion[latitude]",
+            "optional": false,
+            "description": "Provide the suggested address latitude"
+          }
         ]
         }
     },
@@ -1408,7 +1422,15 @@ define({ api: [
             "field": "event_location_suggestion_id",
             "optional": false,
             "description": "Provide the event location suggestion id"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "type",
+            "optional": true,
+            "description": "Provide the value as 'up' to upvote . otherwise it is a downvote"
           }
+
         ]
         }
     },
@@ -1416,7 +1438,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"vote_count\":\"3\",\n\t\"self_voted\":\"true\"\n}"
+          "content": "{\n\t\"vote_count\":\"3\"\n}"
         }
       ]
     }
@@ -1522,6 +1544,13 @@ define({ api: [
             "field": "event_about_suggestion_id",
             "optional": false,
             "description": "Provide the event address suggestion id"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "type",
+            "optional": true,
+            "description": "Provide the value as 'up' to upvote . otherwise it is a downvote"
           }
         ]
         }
@@ -1530,7 +1559,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"vote_count\":\"3\",\n\t\"self_voted\":\"true\"\n}"
+          "content": "{\n\t\"vote_count\":\"3\"\n}"
         }
       ]
     }
@@ -1643,6 +1672,13 @@ define({ api: [
             "field": "event_about_suggestion_id",
             "optional": false,
             "description": "Provide the event time suggestion id"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "type",
+            "optional": true,
+            "description": "Provide the value as 'up' to upvote . otherwise it is a downvote"
           }
         ]
         }
@@ -1651,7 +1687,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"vote_count\":\"3\",\n\t\"self_voted\":\"true\"\n}"
+          "content": "{\n\t\"vote_count\":\"3\"\n}"
         }
       ]
     }
