@@ -247,6 +247,27 @@ define({ api: [
           },
           {
             "group": "Parameter",
+            "type": "String",
+            "field": "profile[lat]",
+            "optional": false,
+            "description": "Provide the latitude for location."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "profile[long]",
+            "optional": false,
+            "description": "Provide the longitude for location."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "profile[location]",
+            "optional": false,
+            "description": "Provide the location of user."
+          },
+          {
+            "group": "Parameter",
             "type": "File",
             "field": "profile[profile_image_attributes][media]",
             "optional": false,
@@ -273,7 +294,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"name\":\"johari\",\n\t\"date_of_birth\":\"1989-06-27\",\n\t\"gender\":\"m\",\n\t\"status\":\"status message\",\n\t\"email\":\"joharimani@gmail.com\",\n\t\"image_url\":null,\n\t\"updated_at\":\"2015-02-09T07:58:25.613Z\" \n}"
+          "content": "{\n\t\"name\":\"johari\",\n\t\"date_of_birth\":\"1989-06-27\",\n\t\"gender\":\"m\",\n\t\"status\":\"status message\",\n\t\"email\":\"joharimani@gmail.com\",\n\t\"image_url\":null,\n\t\"lat\": \"20\",\n\t\"long\": \"78.0\",\n\t\"location\": \"Kiwitech\",\n\t\"updated_at\":\"2015-02-09T07:58:25.613Z\" \n}"
         }
       ]
     }
