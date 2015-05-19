@@ -1774,6 +1774,13 @@ define({ api: [
             "field": "auth_token",
             "optional": false,
             "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Time",
+            "field": "latest_time_suggestion_at",
+            "optional": true,
+            "description": "Provide the time stamp after which you want updated or created record ."
           }
         ]
         }
@@ -1805,6 +1812,13 @@ define({ api: [
             "field": "auth_token",
             "optional": false,
             "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Time",
+            "field": "latest_location_suggestion_at",
+            "optional": true,
+            "description": "Provide the time stamp after which you want updated or created record ."
           }
         ]
         }
@@ -1835,6 +1849,13 @@ define({ api: [
             "field": "auth_token",
             "optional": false,
             "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Time",
+            "field": "latest_description_suggestion_at",
+            "optional": true,
+            "description": "Provide the time stamp after which you want updated or created record ."
           }
         ]
         }
