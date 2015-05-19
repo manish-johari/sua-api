@@ -1252,9 +1252,9 @@ define({ api: [
   {
     "type": "get",
     "url": "/profiles/:id",
-    "title": "View Profile --Deprecated",
+    "title": "View Profile",
     "name": "profile",
-    "description": "API will show profile of contact.",
+    "description": "API will show profile of seeyouall user.",
     "group": "Profile",
     "version": "1",
     "parameter": {
@@ -1274,7 +1274,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"name\":\"Manish\",\n\t\"date_of_birth\":null,\n\t\"gender\":\"m\",\n\t\"status\":null,\n\t\"email\":\"\",\n\t\"image_url\":null\n}"
+          "content": "{\n\t\"name\":\"Manish\",\n\t\"date_of_birth\":null,\n\t\"gender\":\"m\",\n\t\"status\":null,\n\t\"email\":\"\",\n\t\"image_url\":null,\n\t\"lat\": \"20\",\n\t\"long\": \"78.0\",\n\t\"location\": \"Kiwitech\"\n}"
         }
       ]
     }
