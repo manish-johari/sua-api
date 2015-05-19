@@ -885,7 +885,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"events\":\n\t\t{\n\t\t\"latest_updated_at\" : \"2015-04-17T07:53:17.524Z\",\n\t\t\"created\" :  [\n\t\t\t\t\t{\n\t\t\t\t\t\"id\":6,\n\t\t\t\t\t\"start_time\":\"2016-10-11T11:20:00.000Z\",\n\t\t\t\t\t\"end_time\":\"2016-11-11T11:20:00.000Z\",\n\t\t\t\t\t\"updated_at\":\"2016-11-11T11:20:00.000Z\",\n\t\t\t\t\t\"invitee_list_updated_at\":\"2016-11-11T11:20:00.000Z\"\n\t\t\t\t\t\}\n\t\t\t\t],\n\t\t\"updated\" : [\n\t\t\t\t\t{\n\t\t\t\t\t\"id\":5,\n\t\t\t\t\t\"start_time\":\"2016-11-11T11:20:00.000Z\",\n\t\t\t\t\t\"end_time\":\"2016-12-11T11:20:00.000Z\",\n\t\t\t\t\t\"updated_at\":\"2016-11-11T11:20:00.000Z\",\n\t\t\t\t\t\"invitee_list_updated_at\":\"2016-11-11T11:20:00.000Z\"\n\t\t\t\t\t\}\n\t\t\t\t],\n\t\t\"deleted\":[6]\n\t\t}\n}"
+          "content": "https://gist.github.com/nitinjain-kiwi/48f513dacfa020266cab"
         }
       ]
     }
@@ -1774,6 +1774,13 @@ define({ api: [
             "field": "auth_token",
             "optional": false,
             "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Time",
+            "field": "latest_time_suggestion_at",
+            "optional": true,
+            "description": "Provide the time stamp after which you want updated or created record ."
           }
         ]
         }
@@ -1782,7 +1789,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "[\n\t{\n\t\"id\":\"4\", \n\t\"start_time\":\"null\", \n\t\"end_time\":\"null\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}, \n\t{\n\t\"id\":\"5\", \n\t\"start_time\":\"null\", \n\t\"end_time\":\"null\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}\n\t\]"
+          "content": "https://gist.github.com/nitinjain-kiwi/0a263432b5f6725f1ab8"
         }
       ]
     }
@@ -1805,6 +1812,13 @@ define({ api: [
             "field": "auth_token",
             "optional": false,
             "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Time",
+            "field": "latest_location_suggestion_at",
+            "optional": true,
+            "description": "Provide the time stamp after which you want updated or created record ."
           }
         ]
         }
@@ -1813,7 +1827,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "[\n\t{\n\t\"id\":\"4\", \n\t\"address\":\"new adddress\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}, \n\t{\n\t\"id\":\"5\", \n\t\"address\":\"Another addrees\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}\n\t\]"
+          "content": "https://gist.github.com/nitinjain-kiwi/3ef81dad6b67453f50b0"
         }
       ]
     }
@@ -1835,6 +1849,13 @@ define({ api: [
             "field": "auth_token",
             "optional": false,
             "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "Time",
+            "field": "latest_description_suggestion_at",
+            "optional": true,
+            "description": "Provide the time stamp after which you want updated or created record ."
           }
         ]
         }
@@ -1843,7 +1864,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "[\n\t{\n\t\"id\":\"4\", \n\t\"description\":\"new desc\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}, \n\t{\n\t\"id\":\"5\", \n\t\"description\":\"Desc\", \n\t\"vote_count\":\"1\",  \n\t\"self_voted\":\"true\"}\n\t\]"
+          "content": "https://gist.github.com/nitinjain-kiwi/277435f8e1d3d965b7eb"
         }
       ]
     }
