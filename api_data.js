@@ -1609,9 +1609,9 @@ define({ api: [
 
   {
     "type": "post",
-    "url": "event_address_suggestions/:id/lock",
-    "title": "Address Suggestion",
-    "name": "Address",
+    "url": "event_about_suggestions/:id/lock",
+    "title": "About Suggestion",
+    "name": "About",
     "description": "API will locked the suggestion and become the Description for event",
     "group": "Lock",
     "version": "1",
