@@ -745,21 +745,21 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "Boolean",
-            "field": "time_suggestion_allowed",
+            "field": "event[time_suggestion_allowed]",
             "optional": false,
             "description": "Provide time suggestion allowed or not."
           },
           {
             "group": "Parameter",
             "type": "Boolean",
-            "field": "about_suggestion_allowed",
+            "field": "event[about_suggestion_allowed]",
             "optional": false,
             "description": "Provide about suggestion allowed or not."
           },
           {
             "group": "Parameter",
             "type": "Boolean",
-            "field": "location_suggestion_allowed",
+            "field": "event[location_suggestion_allowed]",
             "optional": false,
             "description": "Provide location suggestion allowed or not."
           },
@@ -1108,21 +1108,21 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "Boolean",
-            "field": "time_suggestion_allowed",
+            "field": "event[time_suggestion_allowed]",
             "optional": false,
             "description": "Provide time suggestion allowed or not."
           },
           {
             "group": "Parameter",
             "type": "Boolean",
-            "field": "about_suggestion_allowed",
+            "field": "event[about_suggestion_allowed]",
             "optional": false,
             "description": "Provide about suggestion allowed or not."
           },
           {
             "group": "Parameter",
             "type": "Boolean",
-            "field": "location_suggestion_allowed",
+            "field": "event[location_suggestion_allowed]",
             "optional": false,
             "description": "Provide location suggestion allowed or not."
           },
