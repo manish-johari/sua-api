@@ -1913,9 +1913,9 @@ define({ api: [
   {
     "type": "get",
     "url": "/events/:event_id/event_about_suggestions",
-    "title": "Get Address",
+    "title": "Get about",
     "name": "GetAddress",
-    "description": "API will Grab all Suggestions for event location.",
+    "description": "API will Grab all Suggestions for event descriptions.",
     "group": "Suggest",
     "version": "1",
     "parameter": {
