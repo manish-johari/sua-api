@@ -1829,7 +1829,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"invitee_list_updated_at\":\"2015-05-05T06:28:32.540Z\",\n\t\"created\": [\n\t\t{\n\t\t\t\"seeyouall_id\": \"\", \n\t\t\t\"contact\": \"+919971480801\", \n\t\t\t\"rsvp\": \"\"\n\t\t}\n\t],\n\t\"updated\": [],\n\t\"deleted\": [\n\t\t{\n\t\t\t\"seeyouall_id\": \"2\", \n\t\t\t\"contact\": \"+919971480801\", \n\t\t\t\"rsvp\": \"default\"\n\t\t}\n\t] \n}"
+          "content": "{\n\t\"invitee_list_updated_at\":\"2015-05-05T06:28:32.540Z\",\n\t\"created\": [\n\t\t{\n\t\t\t\"seeyouall_id\": \"\", \n\t\t\t\"contact\": \"+919971480801\", \n\t\t\t\"rsvp\": \"\", \n\t\t\t\"name\": \"+919971480801\",\n\t\t\t\"image_url\": \"\"\n\t\t}\n\t],\n\t\"updated\": [],\n\t\"deleted\": [\n\t\t{\n\t\t\t\"seeyouall_id\": \"2\", \n\t\t\t\"contact\": \"+919971480801\", \n\t\t\t\"rsvp\": \"default\"\n\t\t}\n\t] \n}"
         }
       ]
     }
