@@ -2322,7 +2322,7 @@ define({ api: [
   {
     "type": "get",
     "url": "/new_phone_number/confirm",
-    "title": "Confirm token",
+    "title": "Confirm new number",
     "name": "Confirm_Token",
     "description": "API will verify the confirmation token to update the user's phone number. <br> And will update the user's auth_token.",
     "group": "Settings",
