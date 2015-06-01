@@ -2261,4 +2261,100 @@ define({ api: [
     }
   },
 
+ {
+    "type": "put",
+    "url": "/users/update",
+    "title": "Change Number",
+    "name": "update_phone_number",
+    "description": "API will update user's phone number.\n Confirmation token will be sent via SMS to new phone_num.",
+    "group": "Settings",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "user[old_phone_num]",
+            "optional": false,
+            "description": "Provide the original phone_num."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "user[old_country_code]",
+            "optional": false,
+            "description": "Provide the original country_code."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "user[new_phone_num]",
+            "optional": false,
+            "description": "Provide the new phone_num."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "user[new_country_code]",
+            "optional": false,
+            "description": "Provide the new country_code."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (200):",
+          "content": "{\n\t \"new_country_code\": 91,\n\t \"new_phone_num\": 9971480801\n}"
+        }
+      ]
+    }
+  },
+  {
+    "type": "get",
+    "url": "/new_phone_number/confirm",
+    "title": "Confirm token",
+    "name": "Confirm_Token",
+    "description": "API will verify the confirmation token to update the user's phone number. <br> And will update the user's auth_token.",
+    "group": "Settings",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "user[confirmation_token]",
+            "optional": false,
+            "description": "Provide the confirmation_token sent to user via sms."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response (200):",
+          "content": "{\n\t \"user_id\":1,\n\t \"country_code\":91,\n\t \"phone_num\":\"9971480801\",\n\t\"auth_token\": \"EMcBm7tj5w4ssYhbDztn\" \n}\n"
+        }
+      ]
+    },
+  }
+
 ]});
