@@ -39,7 +39,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"user_id\":1,\n\t \"country_code\":91,\n\t \"phone_num\":\"9971480801\",\n\t \"verification_token\":\"778fb\",\n\t \"token\":\"az2Jf41yDMc1E2DMHssS\" \n}"
+          "content": "{\n\t\"uuid\": \"24b5a2ca-892b-4560-b62a-a840c92d14f3\" \n}"
         }
       ]
     },
@@ -54,7 +54,7 @@ define({ api: [
   },
 
   {
-    "type": "get",
+    "type": "Post",
     "url": "/users/confirmation",
     "title": "Confirm token",
     "name": "Confirm_Token",
@@ -74,9 +74,9 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
-            "field": "auth_token",
+            "field": "user[uuid]",
             "optional": false,
-            "description": "Provide authentication token of user."
+            "description": "Provide uuid given in sign up request."
           },
         ]
       }
@@ -85,7 +85,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success-Response (200):",
-          "content": "{\n\t \"user_id\":1,\n\t \"country_code\":91,\n\t \"phone_num\":\"9971480801\"\n}\n"
+          "content": "{\n\t \"user_id\":1,\n\t \"country_code\":91,\n\t \"token\": \"uD7kpmnsabQi6NHpT4Vx\",\n\t \"phone_num\":\"9971480801\"\n}\n"
         }
       ]
     },
