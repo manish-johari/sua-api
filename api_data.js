@@ -2320,7 +2320,7 @@ define({ api: [
     }
   },
   {
-    "type": "get",
+    "type": "post",
     "url": "/new_phone_number/confirm",
     "title": "Confirm new number",
     "name": "Confirm_Token",
