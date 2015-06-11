@@ -2451,6 +2451,50 @@ define({ api: [
         }
       ]
     },
+  },
+  {
+    "type": "Post",
+    "url": "/reported_problems",
+    "title": "Report a Problem",
+    "name": "create",
+    "description": "API will create a record for a problem faced by user",
+    "group": "Report_Problem",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "reported_problem[body]",
+            "optional": false,
+            "description": "Provide problem in detail."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "reported_problem[title]",
+            "optional": false,
+            "description": "Provide problem title."
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response (200)",
+          "content": "{\n\t \"id\":1 \n}\n"
+        }
+      ]
+    },
   }
 
 ]});
