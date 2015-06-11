@@ -2355,6 +2355,102 @@ define({ api: [
         }
       ]
     },
+  },
+  {
+    "type": "post",
+    "url": "/user_blocked_lists",
+    "title": "Block phone number",
+    "name": "block_number",
+    "description": "API will put the provided phone number with country code in the block list for that user.",
+    "group": "Block_Contact",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "user_blocked_list[full_phone_num]",
+            "optional": false,
+            "description": "Provide phone number with country code."
+          },
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response (200):",
+          "content": "{\n\t \"id\":1,\n\t \"seeyouall_id\":91,\n\t \"full_phone_num\":\"919456262032\" \n}\n"
+        }
+      ]
+    },
+  },
+  {
+    "type": "Get",
+    "url": "/user_blocked_lists",
+    "title": "Block phone number list",
+    "name": "block_number_list",
+    "description": "API will retrieve all the phone number blocked.",
+    "group": "Block_Contact",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response (200):",
+          "content": "[\n\t{\"id\":6,\"seeyouall_id\":2,\"full_phone_num\":9198xx16583x}, \n\t {\"id\":4,\"seeyouall_id\":2,\"full_phone_num\":9198x216583x} \n]"
+        }
+      ]
+    },
+  },
+  {
+    "type": "delete",
+    "url": "/user_blocked_lists/:id",
+    "title": "Un Block phone number",
+    "name": "unblock_number",
+    "description": "API will Unblock the number associated with the given id.",
+    "group": "Block_Contact",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response (204)"
+        }
+      ]
+    },
   }
 
 ]});
