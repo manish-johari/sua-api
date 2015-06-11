@@ -2495,6 +2495,96 @@ define({ api: [
         }
       ]
     },
+  },
+  {
+    "type": "delete",
+    "url": "/event_time_suggestions/:id",
+    "title": "Delete Time Suggestion ",
+    "name": "delete_time",
+    "description": "API will delete a suggestion for time",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response (201)",
+          "content": "{\n\t \"id\":1 \n}\n"
+        }
+      ]
+    },
+  },
+  {
+    "type": "delete",
+    "url": "/event_location_suggestions/:id",
+    "title": "Delete location Suggestion ",
+    "name": "delete_location",
+    "description": "API will delete a suggestion for loction",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response (201)",
+          "content": "{\n\t \"id\":1 \n}\n"
+        }
+      ]
+    },
+  },
+  {
+    "type": "delete",
+    "url": "/event_about_suggestions/:id",
+    "title": "Delete About Suggestion ",
+    "name": "delete_about",
+    "description": "API will delete a suggestion for about",
+    "group": "Suggest",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response (201)",
+          "content": "{\n\t \"id\":1 \n}\n"
+        }
+      ]
+    },
   }
 
 ]});
