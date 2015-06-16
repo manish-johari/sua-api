@@ -569,38 +569,17 @@ define({ api: [
           },
           {
             "group": "Parameter",
-            "type": "String",
-            "field": "event[start_date]",
+            "type": "Array",
+            "field": "event[event_time_suggestions_attributes]",
             "optional": false,
-            "description": "Provide start date of event."
+            "description": "Provide time related field [ { \"is_start_time_updated\" : true/false, \"is_end_time_updated\" : true/false,  \"start_time\" : \"2015-11-11 00:00:00\", \"end_time\" : \"2015-11-11 00:00:00\"} ]."
           },
           {
             "group": "Parameter",
-            "type": "String",
-            "field": "event[end_date]",
+            "type": "Array",
+            "field": "event[event_location_suggestions_attributes]",
             "optional": false,
-            "description": "Provide end date of event."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[lat]",
-            "optional": false,
-            "description": "Provide latitude."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[long]",
-            "optional": false,
-            "description": "Provide longitude."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[location]",
-            "optional": false,
-            "description": "Provide location of event."
+            "description": "Provide location related field . [ { \"latitude\" : Float, \"longitude\" : Float, \"address\" : \"address in string\"}]."
           },
           {
             "group": "Parameter",
@@ -608,20 +587,6 @@ define({ api: [
             "field": "event[all_day]",
             "optional": false,
             "description": "true/false."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[start_time]",
-            "optional": false,
-            "description": "Provide Start time of event."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[end_time]",
-            "optional": false,
-            "description": "Provide End time of event."
           },
           {
             "group": "Parameter",
@@ -640,9 +605,9 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
-            "field": "event[description]",
+            "field": "event[event_about_suggestions_attributes]",
             "optional": false,
-            "description": "Provide description for event."
+            "description": "Provide description for event.[ { \"description\" : \"String\"}]"
           },
           {
             "group": "Parameter",
@@ -723,20 +688,6 @@ define({ api: [
           },
           {
             "group": "Parameter",
-            "type": "Boolean",
-            "field": "event[is_start_time_updated]",
-            "optional": false,
-            "description": "Provide true or false if updated by organizer."
-          },
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "field": "event[is_end_time_updated]",
-            "optional": false,
-            "description": "Provide true or false if updated by organizer."
-          },
-          {
-            "group": "Parameter",
             "type": "String",
             "field": "auth_token",
             "optional": false,
@@ -770,7 +721,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-01T04:33:03.863Z\", \n\t\"image_url\": \"http://seeyouall-staging.s3.amazonaws.com/event_image/16/small-currentResult.png\", \n\t\"is_start_time_updated\": false, \n\t\"is_end_time_updated\": false \n}"
+          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-01T04:33:03.863Z\", \n\t\"image_url\": \"http://seeyouall-staging.s3.amazonaws.com/event_image/16/small-currentResult.png\", \n\t\"event_location_suggestion_id\": 1, \n\t\"event_about_suggestion_id\": null, \n\t\"event_time_suggestion_id\": 1, \n\t\"is_start_time_updated\": false/true/null, \n\t\"is_end_time_updated\": false/true/null \n}"
         }
       ]
     }
