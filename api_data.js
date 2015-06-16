@@ -571,14 +571,14 @@ define({ api: [
             "group": "Parameter",
             "type": "Array",
             "field": "event[event_time_suggestions_attributes]",
-            "optional": false,
+            "optional": true,
             "description": "Provide time related field [ { \"is_start_time_updated\" : true/false, \"is_end_time_updated\" : true/false,  \"start_time\" : \"2015-11-11 00:00:00\", \"end_time\" : \"2015-11-11 00:00:00\"} ]."
           },
           {
             "group": "Parameter",
             "type": "Array",
             "field": "event[event_location_suggestions_attributes]",
-            "optional": false,
+            "optional": true,
             "description": "Provide location related field . [ { \"latitude\" : Float, \"longitude\" : Float, \"address\" : \"address in string\"}]."
           },
           {
@@ -604,9 +604,9 @@ define({ api: [
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Array",
             "field": "event[event_about_suggestions_attributes]",
-            "optional": false,
+            "optional": true,
             "description": "Provide description for event.[ { \"description\" : \"String\"}]"
           },
           {
@@ -891,37 +891,16 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "String",
-            "field": "event[start_date]",
-            "optional": false,
-            "description": "Provide start date of event."
+            "field": "event[event_time_suggestions_attributes]",
+            "optional": true,
+            "description": "Provide time related field [ {\"id\" : 1,  \"is_start_time_updated\" : true/false, \"is_end_time_updated\" : true/false, \"start_time\" : \"2015-11-11 00:00:00\", \"end_time\" : \"2015-11-11 00:00:00\"} ]. "
           },
           {
             "group": "Parameter",
             "type": "String",
-            "field": "event[end_date]",
-            "optional": false,
-            "description": "Provide end date of event."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[lat]",
-            "optional": false,
-            "description": "Provide latitude."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[long]",
-            "optional": false,
-            "description": "Provide longitude."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[location]",
-            "optional": false,
-            "description": "Provide location of event."
+            "field": "event[event_location_suggestions_attributes]",
+            "optional": true,
+            "description": "Provide location related field . [ {\"id\" 1, \"latitude\" : Float, \"longitude\" : Float, \"address\" : \"address in string\"}]. "
           },
           {
             "group": "Parameter",
@@ -929,20 +908,6 @@ define({ api: [
             "field": "event[all_day]",
             "optional": false,
             "description": "true/false."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[start_time]",
-            "optional": false,
-            "description": "Provide Start time of event."
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "field": "event[end_time]",
-            "optional": false,
-            "description": "Provide End time of event."
           },
           {
             "group": "Parameter",
@@ -960,10 +925,10 @@ define({ api: [
           },
           {
             "group": "Parameter",
-            "type": "String",
-            "field": "event[description]",
-            "optional": false,
-            "description": "Provide description for event."
+            "type": "Array",
+            "field": "event[event_about_suggestions_attributes]",
+            "optional": true,
+            "description": "Provide description for event.[ {\"id\" : 1 , \"description\" : \"String\"}] "
           },
           {
             "group": "Parameter",
@@ -1037,20 +1002,6 @@ define({ api: [
           },
           {
             "group": "Parameter",
-            "type": "Boolean",
-            "field": "event[is_start_time_updated]",
-            "optional": false,
-            "description": "Provide true/false."
-          },
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "field": "event[is_end_time_updated]",
-            "optional": false,
-            "description": "Provide true/false."
-          },
-          {
-            "group": "Parameter",
             "type": "String",
             "field": "auth_token",
             "optional": false,
@@ -1083,8 +1034,8 @@ define({ api: [
     "success": {
       "examples": [
         {
-          "title": "Success (200):",
-          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-07T07:42:14.098Z\", \n\t\"image_url\": \"http://seeyouall-staging.s3.amazonaws.com/event_image/17/small-currentResult.png\", \n\t\"is_start_time_updated\": true, \n\t\"is_end_time_updated\": true \n}"
+          "title": "Success (201):",
+          "content": "{\n\t\"id\": \"1\", \n\t\"updated_at\": \"2015-05-01T04:33:03.863Z\", \n\t\"image_url\": \"http://seeyouall-staging.s3.amazonaws.com/event_image/16/small-currentResult.png\", \n\t\"event_location_suggestion_id\": 1, \n\t\"event_about_suggestion_id\": null, \n\t\"event_time_suggestion_id\": 1, \n\t\"is_start_time_updated\": false/true/null, \n\t\"is_end_time_updated\": false/true/null \n}"
         }
       ]
     }
@@ -1146,7 +1097,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"id\":45,\n\t\"title\":\"G3\",\n\t\"image_url\":null,\n\t\"start_date\":\"2012-11-11\",\n\t\"end_date\":\"2012-11-11\",\n\t\"start_time\":\"2015-11-11T00:00:00\",\n\t\"end_time\":\"2015-11-11T00:00:00\",\n\t\"lat\":\"20.2\",\n\t\"long\":\"40.4\",\n\t\"location\":\"kiwitech\",\n\t\"all_day\":false,\n\t\"last_day_to_confirm\":2,\n\t\"bringing_guest\":true,\n\t\"rsvp_for_adult_and_guest\":false,\n\t\"limit_rsvp\":true,\n\t\"max_capacity\":20,\n\t\"seats_reserved\":2,\n\t\"dress_code\":\"formal\",\n\t\"cost\":4.99,\n\t\"allow_voting\":true,\n\t\"disable_chat\":true,\n\t\"hide_guest_list\":false,\n\t\"is_cancelled\":false,\n\t\"added_at\":\"12345\",\n\t\"admin_id\":1,\n\t\"time_suggestion_allowed\": false,\n\t\"about_suggestion_allowed\": false,\n\t\"location_suggestion_allowed\": false,\n\t\"is_start_time_updated\": true, \n\t\"rsvp_going\": 2, \n\t\"is_end_time_updated\": true  \n}"
+          "content": "{\n\t\"id\":45,\n\t\"title\":\"G3\",\n\t\"image_url\":null,\n\t\"start_date\":\"2012-11-11\",\n\t\"end_date\":\"2012-11-11\",\n\t\"start_time\":\"2015-11-11T00:00:00\",\n\t\"end_time\":\"2015-11-11T00:00:00\",\n\t\"lat\":\"20.2\",\n\t\"long\":\"40.4\",\n\t\"location\":\"kiwitech\",\n\t\"all_day\":false,\n\t\"last_day_to_confirm\":2,\n\t\"bringing_guest\":true,\n\t\"rsvp_for_adult_and_guest\":false,\n\t\"limit_rsvp\":true,\n\t\"max_capacity\":20,\n\t\"seats_reserved\":2,\n\t\"dress_code\":\"formal\",\n\t\"cost\":4.99,\n\t\"allow_voting\":true,\n\t\"disable_chat\":true,\n\t\"hide_guest_list\":false,\n\t\"is_cancelled\":false,\n\t\"added_at\":\"12345\",\n\t\"admin_id\":1,\n\t\"time_suggestion_allowed\": false,\n\t\"about_suggestion_allowed\": false,\n\t\"location_suggestion_allowed\": false,\n\t\"is_start_time_updated\": true, \n\t\"event_time_suggestion_id\": 2, \n\t\"event_about_suggestion_id\": 2, \n\t\"event_location_suggestion_id\": 2, \n\t\"rsvp_going\": 2, \n\t\"is_end_time_updated\": true  \n}"
         }
       ]
     }
