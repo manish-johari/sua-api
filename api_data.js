@@ -2031,6 +2031,64 @@ define({ api: [
     }
   },
   {
+    "type": "post",
+    "url": "/messages",
+    "title": "ChatContact",
+    "name": "ChatContact",
+    "description": "API will sent a contact info in chat message.",
+    "group": "Chat",
+    "version": "1",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "auth_token",
+            "optional": false,
+            "description": "Provide authentication token of user."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[vcard_attributes][content]",
+            "optional": false,
+            "description": "Vcard as string."
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "field": "message[event_id]",
+            "optional": false,
+            "description": "Provide the event id."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[added_at]",
+            "optional": false,
+            "description": "This time stamp will be used as message creation time stamp."
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "field": "message[message_type]",
+            "optional": false,
+            "description": "This will be used to distinguish message type. value should be 'ChatContact'"
+          }
+        ]
+        }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Success (201):",
+          "content": "{\"message_id\":\"4\"}"
+        }
+      ]
+    }
+  },
+  {
     "type": "get",
     "url": "/messages",
     "title": "UpwardMessage",
