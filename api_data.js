@@ -105,7 +105,7 @@ define({ api: [
     "title": "Create Contact",
     "name": "create_contact",
     "description": "API will create user's contact.",
-    "group": "Contact---Deprecated",
+    "group": "Contact",
     "version": "1",
     "parameter": {
       "fields": {
@@ -115,7 +115,7 @@ define({ api: [
             "type": "Array",
             "field": "user[contacts]",
             "optional": false,
-            "description": "Provide the array of contact numbers of user. <p>eg. [ { \"id\" : \"\", \"phone_num\"  :\"8826303400\", \"deleted\" : \"0\"} ]</p>"
+            "description": "Provide the array of contact numbers of user. <p>eg. [ \"918826303400\",  \"918826303400\" ]</p>"
           },
           {
             "group": "Parameter",
@@ -131,7 +131,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (201):",
-          "content": "{\n\t\"contacts\":\n\t\t[{\"id\":18,\"phone_num\":\"8826303400\",\"deleted\":0,\"is_existing\":false}] \n}"
+          "content": "https://gist.github.com/nitinjain-kiwi/d8b0e9b088353fbc2904"
         }
       ]
     }
@@ -1731,7 +1731,7 @@ define({ api: [
       "examples": [
         {
           "title": "Success (200):",
-          "content": "{\n\t\"invitee_list_updated_at\":\"2015-05-05T06:28:32.540Z\",\n\t\"created\": [\n\t\t{\n\t\t\t\"seeyouall_id\": \"\", \n\t\t\t\"contact\": \"+919971480801\", \n\t\t\t\"rsvp\": \"\", \n\t\t\t\"name\": \"+919971480801\",\n\t\t\t\"image_url\": \"\"\n\t\t}\n\t],\n\t\"updated\": [],\n\t\"deleted\": [\n\t\t{\n\t\t\t\"seeyouall_id\": \"2\", \n\t\t\t\"contact\": \"+919971480801\", \n\t\t\t\"rsvp\": \"default\"\n\t\t}\n\t] \n}"
+          "content": "https://gist.github.com/nitinjain-kiwi/539eebb04ed276fe515a"
         }
       ]
     }
@@ -1986,7 +1986,7 @@ define({ api: [
           {
             "group": "Parameter",
             "type": "Float",
-            "field": "message[location_attributes][latittude]",
+            "field": "message[location_attributes][latitude]",
             "optional": false,
             "description": "Provide latitude of the location."
           },
